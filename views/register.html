@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Signup and Login</title>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Signup Form -->
+        <div class="form" id="signup-form">
+            <h2>Signup</h2>
+            <form action="/user/signup" method="POST">
+                <label for="signup-name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="signup-username">Username</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="signup-gender">Gender</label>
+                <input type="text" id="gender" name="gender" required>
+                
+                <label for="signup-age">Age</label>
+                <input type="number" id="age" name="age" required>
+
+                <label for="signup-password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Signup</button>
+                
+                <div class="switch">
+                    <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Login Form -->
+        <div class="form" id="login-form" style="display: none;">
+            <h2>Login</h2>
+            <form action="/user/login" method="POST">
+                <label for="login-username">Username</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="login-password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Login</button>
+                
+                <div class="switch">
+                    <p>Don't have an account? <a href="#" onclick="showSignup()">Signup</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showSignup() {
+            document.getElementById('signup-form').style.display = 'block';
+            document.getElementById('login-form').style.display = 'none';
+        }
+
+        function showLogin() {
+            document.getElementById('signup-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Website</title>
+    <style>
+        
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        h1, h3, h4, p {
+            margin: 0;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        .feed {
+            text-align: center;
+            margin: auto;
+            width: 70%;
+            background-color: #4CAF50;
+            margin-top: 10px;
+            padding: 20px;
+        }
+
+        #profileOfUser {
+            text-align: left;
+        }
+
+        .allposts {
+            text-align: center;
+            margin: auto;
+            width: 70%;
+            background-color: #4CAF50;
+            margin-top: 10px;
+            padding: 20px;
+        }
+
+        .posts {
+            background-color: #77c17a;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+    </style>
+   
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <h1>MySocial</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="/user/logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- User Profile Section -->
+    <div class="feed">
+        <div id="profileOfUser">
+            <h3>User Profile</h3>
+            <!-- Dynamically load user profile data here if needed -->
+        </div>
+
+        <!-- Post Form Section -->
+        <div id="SendPost">
+            <form action="/posts/create" method="post">
+                <label for="description">Write Post</label>
+                <input type="text" name="description" id="description" placeholder="What's on your mind?" required> <br><br>
+                <button type="submit">Send Post</button>
+            </form>
+        </div>
+    </div>
+
+    
+
+
+</body>
+</html>
